@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 
+from models import core
+from models.database import engine
 from routers import comics, ratings
 
+core.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
