@@ -10,7 +10,7 @@ class Comic(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String, index=True)
     author = Column(String, index=True)
-    rating = Column(Integer, default=0)
+    rating = Column(Integer, default=0, nullable=False)
 
     comic_ratings = relationship("Rating", back_populates="comic")
 
