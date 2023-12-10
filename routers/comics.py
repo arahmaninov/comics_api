@@ -1,7 +1,5 @@
 from fastapi import APIRouter
 
-from models import core
-from models.database import engine, db
 from controllers.comics import get_all_comics, get_rating
 
 
