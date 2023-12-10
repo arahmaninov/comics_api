@@ -8,6 +8,7 @@
 API endpoints:
 
 /api/ratings/ (post)
+
 /api/comics/<comic_id>/rating/ (get)
 
 В бд уже есть 3 тестовые записи комиксов и 4 записи оценок.
