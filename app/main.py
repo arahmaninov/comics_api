@@ -4,13 +4,8 @@ from models import core
 from models.database import engine, db
 from routers import comics, ratings
 
-core.Base.metadata.create_all(bind=engine)
 
-"""
-first = core.Comic(title="test_comic_1", author="test_author_1")
-db.add(first)
-db.commit()
-"""
+core.Base.metadata.create_all(bind=engine)
 
 all_comics = db.query(core.Comic).all()
 for comic in all_comics:

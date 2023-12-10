@@ -2,6 +2,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 
+
 Base = declarative_base()
 
 class Comic(Base):
@@ -24,3 +25,4 @@ class Rating(Base):
     value = Column(Integer) 
 
     comic = relationship("Comic", back_populates="comic_ratings")
+
